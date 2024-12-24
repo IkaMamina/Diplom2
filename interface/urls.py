@@ -1,7 +1,7 @@
 from django.contrib.auth.views import LogoutView
 from django.urls import path
 from interface.apps import InterfaceConfig
-from interface.views import UserCreateView, SmsCodeView, UserDetailView, UserUpdateView, HomeView
+from interface.views import UserCreateView, SmsCodeView, UserDetailView, UserUpdateView, HomeView, UserListView
 
 app_name = InterfaceConfig.name
 
@@ -12,4 +12,5 @@ urlpatterns = [
     path("sms_code/", SmsCodeView.as_view(), name="sms_code"),
     path("user_detail/", UserDetailView.as_view(), name="user_detail"),
     path("user_update/", UserUpdateView.as_view(), name="user_update"),
+    path("user_list/", UserListView.as_view(), name="user_list"),
 ]

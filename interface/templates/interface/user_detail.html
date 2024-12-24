@@ -5,7 +5,6 @@
     <div class="col-20">
         <div class="card">
             <form action="{% url 'interface:user_update' %}" method="POST">
-            <a class="btn btn-outline-primary" href="{% url 'interface:user_update' %}" role="button">Редактировать</a>
 
             <div class="card-body">
                 {% csrf_token %}
@@ -18,7 +17,8 @@
                 <p class="mb-2">{{ref}}<br/></p>
                 {% endfor %}
             </div>
-            <input type="submit" value="save">
+                <a class="btn btn-outline-primary" href="{% url 'interface:user_update' %}" role="button">Редактировать</a>
+            <input type="submit" value="Сохранить">
             </form>
         </div>
     </div>
